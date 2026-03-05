@@ -12,27 +12,27 @@ const DEMO_MESSAGES = [
   {
     role: "user" as const,
     text: "HELP 😭 My 10-week Golden just bit my daughter and drew blood. Is this aggressive?? Should I be worried???",
-    delay: 0,
+    delay: 600,
   },
   {
     role: "buddy" as const,
     text: "Hey, take a breath. This is completely normal for a 10-week Golden Retriever! This isn't aggression, it's teething + play biting. Golden puppies actually have the MOST mouthy phase of almost any breed. 🐾",
-    delay: 1200,
+    delay: 2800,
   },
   {
     role: "user" as const,
     text: "Really? So he's not aggressive? What do I do to stop it?",
-    delay: 2400,
+    delay: 5400,
   },
   {
     role: "buddy" as const,
     text: "Not aggressive at all, just a puppy being a puppy! Here's what works specifically for Goldens:\n\n1. When he bites, say \"ouch\" and freeze for 3 seconds\n2. Redirect to a frozen washcloth (their teething gums love it)\n3. Practice the \"gentle mouth\" exercise in your training plan\n\nMost Golden parents see 80% improvement in 2 weeks with consistency.",
-    delay: 3800,
+    delay: 8000,
   },
   {
     role: "user" as const,
     text: "Omg thank you 🙏 I feel so much better. Starting the gentle mouth exercise now!",
-    delay: 5200,
+    delay: 11000,
   },
 ];
 
@@ -41,8 +41,6 @@ const FEATURE_PILLS = [
   { icon: "💬", text: "Available 24/7, even at 2am" },
   { icon: "🧠", text: "Learns as your puppy grows" },
 ];
-
-const LOOP_PAUSE_MS = 4000; // pause before restarting
 
 export function MeetBuddySection() {
   const [visibleMessages, setVisibleMessages] = useState(0);
@@ -63,13 +61,7 @@ export function MeetBuddySection() {
       const t = setTimeout(() => setVisibleMessages(i + 1), msg.delay);
       timeoutsRef.current.push(t);
     });
-
-    // After all messages shown + pause, restart
-    const lastDelay = DEMO_MESSAGES[DEMO_MESSAGES.length - 1]!.delay;
-    const restartT = setTimeout(() => {
-      startAnimation();
-    }, lastDelay + LOOP_PAUSE_MS);
-    timeoutsRef.current.push(restartT);
+    // Play once, no loop
   }, [clearAllTimeouts]);
 
   useEffect(() => {
@@ -136,7 +128,7 @@ export function MeetBuddySection() {
                   <div
                     key={`${i}-${visibleMessages}`}
                     className={`flex ${isUser ? "justify-end" : "justify-start"}`}
-                    style={{ animation: "fadeInUp 0.4s ease-out forwards" }}
+                    style={{ animation: "chatFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
                   >
                     {!isUser && (
                       <div className="w-7 h-7 rounded-full flex-shrink-0 mr-2 mt-1 overflow-hidden">
@@ -181,7 +173,7 @@ export function MeetBuddySection() {
               {visibleMessages >= DEMO_MESSAGES.length && (
                 <div
                   className="bg-green-50 border border-green-200 rounded-xl p-3.5 text-center"
-                  style={{ animation: "fadeInUp 0.5s ease-out forwards" }}
+                  style={{ animation: "chatFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
                 >
                   <span className="text-green-600 text-sm font-medium">
                     ✅ Crisis resolved in 60 seconds. That's Buddy.
@@ -204,9 +196,9 @@ export function MeetBuddySection() {
       </div>
 
       <style>{`
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to { opacity: 1; transform: translateY(0); }
+        @keyframes chatFadeIn {
+          from { opacity: 0; transform: translate3d(0, 8px, 0); }
+          to { opacity: 1; transform: translate3d(0, 0, 0); }
         }
       `}</style>
     </section>

@@ -52,7 +52,7 @@ export function TrainingPlanSection() {
           <div className="flex-1 animate-on-scroll">
             <div className="space-y-5 mb-8">
               {PLAN_FEATURES.map((feat, i) => (
-                <div key={i} className="flex gap-4">
+                <div key={i} className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-start gap-3 lg:gap-4">
                   <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-coral/10 flex items-center justify-center text-xl">
                     {feat.icon}
                   </div>
@@ -64,12 +64,14 @@ export function TrainingPlanSection() {
               ))}
             </div>
 
-            <a
-              href="#get-early-access"
-              className="inline-block bg-coral hover:bg-coral/90 text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors no-underline"
-            >
-              Get Your Personalized Plan →
-            </a>
+            <div className="text-center lg:text-left">
+              <a
+                href="#get-early-access"
+                className="inline-block bg-coral hover:bg-coral/90 text-white font-semibold px-7 py-3.5 rounded-full text-sm transition-colors no-underline"
+              >
+                Get Your Personalized Plan →
+              </a>
+            </div>
           </div>
 
           {/* Right: Category grid */}
