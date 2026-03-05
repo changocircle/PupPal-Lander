@@ -59,15 +59,16 @@ export function BuddyChatWidget() {
     }
   }, []);
 
-  // Show button after 2s, then auto-open chat after 5s (once per session)
+  // Show button after 2s, then auto-open chat after 5s on desktop only (once per session)
   useEffect(() => {
     const buttonTimer = setTimeout(() => setShowButton(true), 2000);
 
     const AUTO_OPEN_KEY = "puppal_buddy_auto_opened";
     const alreadyAutoOpened = sessionStorage.getItem(AUTO_OPEN_KEY);
+    const isMobile = window.innerWidth < 1024;
 
     let openTimer: ReturnType<typeof setTimeout> | undefined;
-    if (!alreadyAutoOpened) {
+    if (!alreadyAutoOpened && !isMobile) {
       openTimer = setTimeout(() => {
         setShowButton(true);
         setIsOpen(true);
@@ -188,7 +189,7 @@ export function BuddyChatWidget() {
             onClick={() => setIsOpen(false)}
           />
 
-          <div className="fixed z-50 bottom-0 right-0 lg:bottom-6 lg:right-6 w-full lg:w-[380px] h-[calc(100vh-60px)] lg:h-[520px] bg-white lg:rounded-2xl shadow-2xl shadow-navy/20 flex flex-col overflow-hidden border border-gray-100">
+          <div className="fixed z-50 bottom-0 right-0 lg:bottom-6 lg:right-6 w-full lg:w-[380px] h-[60vh] max-h-[500px] lg:h-[520px] lg:max-h-none bg-white rounded-t-2xl lg:rounded-2xl shadow-2xl shadow-navy/20 flex flex-col overflow-hidden border border-gray-100">
             {/* Header */}
             <div className="bg-navy px-4 py-3 flex items-center gap-3 flex-shrink-0">
               <div className="w-9 h-9 rounded-full bg-coral/20 flex items-center justify-center overflow-hidden">

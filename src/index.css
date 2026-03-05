@@ -105,6 +105,22 @@ html {
 body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+}
+
+/* ── Reduce motion on mobile for smoother scrolling ── */
+@media (max-width: 768px) {
+  .animate-on-scroll {
+    transition-duration: 0.35s !important;
+  }
+  .bubble-float,
+  .bubble-float-slow,
+  .bubble-float-fast {
+    animation-play-state: paused !important;
+  }
+  .buddy-pulse {
+    animation: none !important;
+  }
 }
 
 /* ── GPU compositing for smooth animations ── */

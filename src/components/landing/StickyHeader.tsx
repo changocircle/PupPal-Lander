@@ -16,7 +16,7 @@ export function StickyHeader({ scrolled }: Props) {
           ? "bg-white/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
-      style={{ willChange: "background-color, box-shadow", transform: "translateZ(0)" }}
+      style={{ willChange: "background-color, box-shadow", transform: "translateZ(0)", backfaceVisibility: "hidden" }}
       role="banner"
     >
       <div className="container mx-auto flex items-center justify-between py-4">
