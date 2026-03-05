@@ -75,12 +75,12 @@ export function TrainingPlanSection() {
           </div>
 
           {/* Right: Category grid */}
-          <div className="flex-1 animate-on-scroll">
+          <div className="flex-1 animate-on-scroll w-full max-w-sm mx-auto lg:max-w-none lg:mx-0">
             <div className="grid grid-cols-2 gap-3">
               {CATEGORIES.map((cat, i) => (
                 <div
                   key={i}
-                  className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md hover:border-coral/20 transition-all"
+                  className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md hover:border-coral/20 transition-all text-center lg:text-left"
                 >
                   <div className="text-2xl mb-2">{cat.icon}</div>
                   <p className="font-semibold text-navy text-sm">{cat.name}</p>

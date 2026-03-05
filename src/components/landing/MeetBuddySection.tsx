@@ -124,11 +124,12 @@ export function MeetBuddySection() {
               {DEMO_MESSAGES.map((msg, i) => {
                 if (i >= visibleMessages) return null;
                 const isUser = msg.role === "user";
+                const isLatest = i === visibleMessages - 1;
                 return (
                   <div
-                    key={`${i}-${visibleMessages}`}
+                    key={i}
                     className={`flex ${isUser ? "justify-end" : "justify-start"}`}
-                    style={{ animation: "chatFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards" }}
+                    style={isLatest ? { animation: "chatFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards" } : undefined}
                   >
                     {!isUser && (
                       <div className="w-7 h-7 rounded-full flex-shrink-0 mr-2 mt-1 overflow-hidden">

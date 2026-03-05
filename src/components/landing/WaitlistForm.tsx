@@ -64,7 +64,7 @@ export function WaitlistForm({
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <div
-        className={`flex ${compact ? "flex-row" : "flex-col sm:flex-row"} gap-3 ${
+        className={`flex flex-col sm:flex-row gap-3 ${
           compact ? "max-w-md mx-auto" : ""
         }`}
       >
