@@ -105,7 +105,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold text-navy mt-8 mb-3">11. Contact</h2>
             <p>For questions about these Terms, contact us at:</p>
-            <p className="mt-2"><strong>Email:</strong> <a href="mailto:hello@puppal.app" className="text-coral hover:underline">hello@puppal.app</a></p>
+            <p className="mt-2"><strong>Email:</strong> <a href="mailto:hello@puppal.dog" className="text-coral hover:underline">hello@puppal.dog</a></p>
           </section>
         </div>
       </main>

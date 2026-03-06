@@ -21,7 +21,7 @@ export function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-white/40">
-            <a href="mailto:hello@puppal.app" className="hover:text-white/70 transition-colors no-underline">
+            <a href="mailto:hello@puppal.dog" className="hover:text-white/70 transition-colors no-underline">
               Contact
             </a>
             <span>·</span>

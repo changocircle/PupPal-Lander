@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://puppal.app/sitemap.xml
+Sitemap: https://puppal.dog/sitemap.xml

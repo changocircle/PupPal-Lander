@@ -100,7 +100,7 @@ export default function PrivacyPage() {
               <li>Opt out of marketing communications</li>
               <li>Withdraw consent for data processing</li>
             </ul>
-            <p className="mt-2">To exercise these rights, contact us at <a href="mailto:hello@puppal.app" className="text-coral hover:underline">hello@puppal.app</a>.</p>
+            <p className="mt-2">To exercise these rights, contact us at <a href="mailto:hello@puppal.dog" className="text-coral hover:underline">hello@puppal.dog</a>.</p>
           </section>
 
           <section>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-navy mt-8 mb-3">11. Contact</h2>
             <p>For questions about this Privacy Policy, contact us at:</p>
-            <p className="mt-2"><strong>Email:</strong> <a href="mailto:hello@puppal.app" className="text-coral hover:underline">hello@puppal.app</a></p>
+            <p className="mt-2"><strong>Email:</strong> <a href="mailto:hello@puppal.dog" className="text-coral hover:underline">hello@puppal.dog</a></p>
           </section>
         </div>
       </main>
