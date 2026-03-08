@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, type FormEvent } from "react";
+import { createPortal } from "react-dom";
 import { useAction } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import { BuddyAvatar } from "./HeroSection";
@@ -170,7 +171,8 @@ export function BuddyChatWidget() {
 
   if (!showButton) return null;
 
-  return (
+  // Portal to document.body so no ancestor transforms/overflow can break fixed positioning
+  return createPortal(
     <>
       {/* Floating button */}
       {!isOpen && (
@@ -321,6 +323,7 @@ export function BuddyChatWidget() {
           </div>
         </>
       )}
-    </>
+    </>,
+    document.body
   );
 }

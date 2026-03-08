@@ -105,7 +105,6 @@ html {
 body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  -webkit-transform: translateZ(0);
 }
 
 /* ── Reduce motion on mobile for smoother scrolling ── */
