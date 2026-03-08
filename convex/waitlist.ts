@@ -1,9 +1,11 @@
 import { mutation, query } from "./_generated/server";
+import { internal } from "./_generated/api";
 import { v } from "convex/values";
 
 export const join = mutation({
   args: {
     email: v.string(),
+    name: v.optional(v.string()),
     utmSource: v.optional(v.string()),
     utmMedium: v.optional(v.string()),
     utmCampaign: v.optional(v.string()),
@@ -33,6 +35,16 @@ export const join = mutation({
       deviceType: args.deviceType,
       joinedAt: Date.now(),
     });
+
+    // Schedule the 3-email welcome sequence
+    await ctx.scheduler.runAfter(
+      0,
+      internal.emails.scheduleWelcomeSequence,
+      {
+        email: args.email.toLowerCase().trim(),
+        name: args.name ?? "",
+      },
+    );
 
     return { success: true, alreadyJoined: false };
   },
