@@ -45,7 +45,7 @@ export function BuddyChatWidget() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasGreeted, setHasGreeted] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const sendMessage = useAction(api.chat.sendMessage);
 
@@ -95,15 +95,18 @@ export function BuddyChatWidget() {
     };
   }, []);
 
-  // Auto-scroll to bottom
+  // Auto-scroll chat messages to bottom (scroll container only, not the page)
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const el = messagesContainerRef.current;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+    }
   }, [messages, isLoading]);
 
-  // Focus input when opened
+  // Focus input when opened (preventScroll so the page doesn't jump)
   useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 300);
+      setTimeout(() => inputRef.current?.focus({ preventScroll: true }), 300);
     }
   }, [isOpen]);
 
@@ -212,7 +215,7 @@ export function BuddyChatWidget() {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#FFFAF7]">
+            <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3 bg-[#FFFAF7]">
               {messages.map((msg, i) => (
                 <div
                   key={i}
@@ -260,17 +263,24 @@ export function BuddyChatWidget() {
                   <p className="text-xs text-gray-500 mb-3">
                     Download PupPal. 3-day free trial, no credit card.
                   </p>
-                  <a
-                    href="#get-early-access"
-                    onClick={() => setIsOpen(false)}
-                    className="inline-block bg-coral hover:bg-coral/90 text-white font-semibold px-5 py-2 rounded-full text-xs transition-colors no-underline"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsOpen(false);
+                      // Scroll to CTA after closing, without the chat causing the jump
+                      requestAnimationFrame(() => {
+                        document.getElementById("get-early-access")?.scrollIntoView({ behavior: "smooth" });
+                      });
+                    }}
+                    className="inline-block bg-coral hover:bg-coral/90 text-white font-semibold px-5 py-2 rounded-full text-xs transition-colors cursor-pointer"
                   >
                     Get Early Access →
-                  </a>
+                  </button>
                 </div>
               )}
 
-              <div ref={messagesEndRef} />
+              {/* bottom spacer for scroll padding */}
+              <div aria-hidden="true" />
             </div>
 
             {/* Input bar */}
