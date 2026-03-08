@@ -15,6 +15,8 @@ import LandingPage from "./pages/LandingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import AffiliatePage from "./pages/AffiliatePage";
+import BlogIndexPage from "./pages/blog/index";
+import BlogPostPage from "./pages/blog/[slug]";
 
 interface Props {
   path: string;
@@ -35,6 +37,13 @@ export default function AppSSR({ path }: Props) {
   }
   if (path === "/affiliate") {
     return <AffiliatePage onJoinWaitlist={noopJoinWaitlist} />;
+  }
+  if (path === "/blog" || path === "/blog/") {
+    return <BlogIndexPage />;
+  }
+  if (path.startsWith("/blog/")) {
+    const slug = path.replace("/blog/", "").replace(/\/$/, "");
+    return <BlogPostPage slug={slug} />;
   }
   // Default: landing page
   return (

@@ -1,0 +1,20 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "5J4UG739H5.com.puppal.app",
+        "paths": [
+          "/referral/*",
+          "/share/*",
+          "/reset-password",
+          "/invite/*",
+          "/open"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["5J4UG739H5.com.puppal.app"]
+  }
+}
