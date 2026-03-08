@@ -2,10 +2,7 @@ import { Password } from "@convex-dev/auth/providers/Password";
 import { convexAuth, getAuthUserId } from "@convex-dev/auth/server";
 import { query } from "./_generated/server";
 import { TestCredentials } from "./testAuth";
-import {
-  ViktorSpacesEmail,
-  ViktorSpacesPasswordReset,
-} from "./ViktorSpacesEmail";
+import { ResendEmail, ResendPasswordReset } from "./ResendEmail";
 
 declare const process: { env: Record<string, string | undefined> };
 
@@ -26,11 +23,6 @@ function decodePrivateKey(key: string | undefined): string | undefined {
   }
 }
 
-const authPrivateKey = process.env.AUTH_PRIVATE_KEY;
-if (authPrivateKey) {
-  process.env.AUTH_PRIVATE_KEY = decodePrivateKey(authPrivateKey);
-}
-
 const jwtPrivateKey = process.env.JWT_PRIVATE_KEY;
 if (jwtPrivateKey) {
   process.env.JWT_PRIVATE_KEY = decodePrivateKey(jwtPrivateKey);
@@ -39,8 +31,8 @@ if (jwtPrivateKey) {
 export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
   providers: [
     Password({
-      verify: ViktorSpacesEmail,
-      reset: ViktorSpacesPasswordReset,
+      verify: ResendEmail,
+      reset: ResendPasswordReset,
     }),
     TestCredentials,
   ],
