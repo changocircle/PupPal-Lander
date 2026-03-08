@@ -60,7 +60,7 @@ export function BuddyChatWidget() {
     }
   }, []);
 
-  // Show button after 2s, then auto-open chat after 5s on desktop only (once per session)
+  // Show button after 2s; auto-open chat after 3s on desktop only (once per session)
   useEffect(() => {
     const buttonTimer = setTimeout(() => setShowButton(true), 2000);
 
@@ -74,7 +74,7 @@ export function BuddyChatWidget() {
         setShowButton(true);
         setIsOpen(true);
         sessionStorage.setItem(AUTO_OPEN_KEY, "1");
-      }, 5000);
+      }, 3000);
     }
 
     const observer = new IntersectionObserver(
