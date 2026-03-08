@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist/server",
+    "build:prerender": "bun run build && bun run build:ssr && bun run scripts/prerender.ts",
     "preview": "vite preview",
     "check": "biome check .",
     "format": "biome check --write .",
