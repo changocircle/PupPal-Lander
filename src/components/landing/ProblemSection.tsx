@@ -146,7 +146,7 @@ export function ProblemSection() {
                 </div>
               ))}
               {/* Overwhelm indicator */}
-              <div className="absolute -bottom-2 right-4 text-5xl sm:text-6xl opacity-30">😰</div>
+
             </div>
           </div>
         </div>
