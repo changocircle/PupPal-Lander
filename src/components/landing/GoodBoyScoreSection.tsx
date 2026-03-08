@@ -89,15 +89,14 @@ export function GoodBoyScoreSection() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight mb-6">
               The Good Boy Score.{" "}
               <span className="text-navy">
-                Finally, a way to know if your training is working.
+                Stop guessing. Start knowing.
               </span>
             </h2>
 
             <div className="space-y-4 text-base text-gray-600 leading-relaxed mb-8">
               <p>
-                Every training session, every milestone, every day you show up, it all counts.
-                Your Good Boy Score tracks your puppy's real progress so you're never
-                wondering "is this working?"
+                Every training session, every milestone, every day you show up counts
+                toward a single number. Watch it climb. Know it is working.
               </p>
             </div>
 

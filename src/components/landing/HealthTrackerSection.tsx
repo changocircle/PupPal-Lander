@@ -14,8 +14,7 @@ export function HealthTrackerSection() {
               Health & Wellness
             </p>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy leading-tight mb-6">
-              Never miss a vaccination.{" "}
-              Track weight, meds, and milestones in one place.
+              Everything your vet wishes you were tracking. Built in.
             </h2>
 
             <div className="space-y-4 mb-8">
@@ -38,7 +37,7 @@ export function HealthTrackerSection() {
                 {
                   icon: "📔",
                   title: "Growth journal",
-                  desc: "Auto-recorded milestones plus your own photos and notes.",
+                  desc: "Milestones, photos, and notes. A whole scrapbook, automatically.",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex gap-4">

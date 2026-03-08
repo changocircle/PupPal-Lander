@@ -88,7 +88,7 @@ export function MeetBuddySection() {
         {/* Heading */}
         <div className="text-center mb-12 animate-on-scroll">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy mb-4">
-            Meet Buddy. Your AI puppy mentor.
+            Meet Buddy. The trainer who's always on.
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">

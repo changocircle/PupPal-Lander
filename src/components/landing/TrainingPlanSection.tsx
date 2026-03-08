@@ -18,8 +18,8 @@ const CATEGORIES = [
 const PLAN_FEATURES = [
   {
     icon: "🧬",
-    title: "Breed-specific",
-    desc: "Exercises tailored to your breed's instincts, energy, and learning style.",
+    title: "Built for your breed",
+    desc: "Golden Retrievers need different training than Frenchies. Buddy knows the difference, down to energy levels and instincts.",
   },
   {
     icon: "📅",

@@ -141,7 +141,7 @@ export function PriceComparisonSection({ onJoinWaitlist }: Props) {
         <div className="text-center animate-on-scroll max-w-lg mx-auto">
           <WaitlistForm onSubmit={onJoinWaitlist} buttonText="Join the Waitlist (It's Free)" compact />
           <p className="text-xs text-gray-400 mt-3">
-            Launch pricing: $39.99/year with 3-day free trial. Lock in early access pricing.
+            Launch pricing: $39.99/year or $9.99/month. Lock in early access pricing. 3-day free trial, no credit card required to start.
           </p>
         </div>
       </div>

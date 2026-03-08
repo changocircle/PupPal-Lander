@@ -21,7 +21,7 @@ const FAQS = [
   },
   {
     q: "What age should my puppy be?",
-    a: "PupPal is designed for puppies 8 weeks to 12 months, but the training doesn't stop there. What works for an 8-week-old is very different from a 6-month-old. Your plan adapts as your puppy grows, with new exercises and challenges all year long.",
+    a: "PupPal is designed for puppies 8 weeks and up. The sweet spot is the first year, when the right training habits make the biggest difference. But your plan keeps evolving past 12 months with new skills, challenges, and maintenance exercises as your dog grows up.",
   },
   {
     q: "Can it replace a professional trainer?",
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "How much does PupPal cost?",
-    a: "PupPal is $39.99/year ($3.33/month), less than a single 30-minute session with most trainers. We also offer a monthly plan at $9.99/month. Week 1 of training is completely free, no credit card required.",
+    a: "PupPal is $39.99/year ($3.33/month), less than a single 30-minute session with most trainers. We also offer a monthly plan at $9.99/month. Every new user gets a 3-day free trial at launch, no credit card required to get started.",
   },
   {
     q: "Is my data safe?",

@@ -121,7 +121,7 @@ export function ProblemSection() {
               <p>"Is my puppy biting too much, or is&nbsp;this&nbsp;normal?"</p>
               <p>Every breed is different. Every puppy is&nbsp;different.</p>
               <p className="font-semibold text-navy text-xl">
-                You need answers that actually know <em className="text-emerald-600 not-italic font-bold">your</em>&nbsp;situation.
+                You need answers built around <em className="text-emerald-600 not-italic font-bold">YOUR</em>&nbsp;puppy, not some generic retriever in a YouTube video.
               </p>
             </div>
           </div>
