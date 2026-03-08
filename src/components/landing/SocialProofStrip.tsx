@@ -82,7 +82,7 @@ export function SocialProofStrip() {
         {/* Heading */}
         <div className="text-center mb-12 animate-on-scroll">
           <p className="text-coral font-semibold text-sm tracking-wide uppercase mb-3">
-            What Our Beta Testers Say
+            What Puppy Parents Are Saying
           </p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy">
             Real puppy parents. Real results.
@@ -118,7 +118,7 @@ export function SocialProofStrip() {
                       ))}
                     </div>
                     <span className="text-[11px] font-medium text-gray-400 bg-gray-100 px-2.5 py-1 rounded-full">
-                      Beta Tester
+                      Early Access Member
                     </span>
                   </div>
 

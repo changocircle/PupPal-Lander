@@ -40,7 +40,7 @@ export function FinalCTASection({ onJoinWaitlist, waitlistCount }: Props) {
             </h2>
 
             <p className="text-lg text-white/80 mb-10 max-w-lg mx-auto">
-              Every day shapes the dog they'll become. Make them&nbsp;count.
+              Every day shapes who they become. Make every one&nbsp;count.
             </p>
 
             {/* CTA form */}

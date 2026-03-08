@@ -8,7 +8,7 @@ const FEATURES = [
   {
     icon: "📔",
     title: "Growth Journal",
-    desc: "Auto-recorded milestones plus your own photos and notes. Watch your puppy grow up in a beautiful timeline.",
+    desc: "Every milestone, your best photos, and your own notes. Watch your puppy grow up, week by week.",
     color: "bg-amber-50 border-amber-100",
     iconBg: "bg-amber-100",
   },
@@ -36,7 +36,7 @@ const FEATURES = [
   {
     icon: "👥",
     title: "Community & Referrals",
-    desc: "Share your journey, invite friends, and earn rewards. Puppy parenting is better together.",
+    desc: "Refer a friend, both get rewarded. Track your stats, share wins, and commiserate about the 3am wake-ups.",
     color: "bg-pink-50 border-pink-100",
     iconBg: "bg-pink-100",
   },

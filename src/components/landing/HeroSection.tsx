@@ -23,7 +23,7 @@ export function HeroSection({ onJoinWaitlist, waitlistCount, referralCode }: Pro
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left">
             <p className="text-coral font-semibold text-sm tracking-wide uppercase mb-4">
-              AI-Powered Puppy Training
+              Your puppy's first year is everything.
             </p>
 
             <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-navy leading-tight mb-6">
@@ -34,8 +34,8 @@ export function HeroSection({ onJoinWaitlist, waitlistCount, referralCode }: Pro
 
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               {referralCode
-                ? "Your friend thinks you'll love this. They're probably right. Personalized training plans, an AI mentor that knows your breed, and 160+ exercises."
-                : "Personalized training plans, an AI mentor that knows your breed, health tracking, and 160+ exercises. All in one app."}
+                ? "Your friend thinks you'll love this. They're probably right. Buddy is your AI puppy mentor. He knows your breed, adapts as your puppy grows, and answers every panicked 2am question you are too embarrassed to Google."
+                : "Buddy is your AI puppy mentor. He knows your breed, adapts as your puppy grows, and answers every panicked 2am question you are too embarrassed to Google."}
             </p>
 
             {/* CTA */}
