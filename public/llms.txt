@@ -1,0 +1,55 @@
+# PupPal
+
+> AI-powered puppy training app that gives every puppy parent a personal dog trainer in their pocket, available 24/7.
+
+PupPal is a mobile app for first-time puppy parents who feel overwhelmed by conflicting advice online. It combines a personalized 12-week training program, an AI mentor named Buddy (powered by Claude Sonnet), health and vaccination tracking, gamification, a breed encyclopedia, and a growth journal, all in one place.
+
+The app is built around positive reinforcement only. No punishment, no shock collars, no "dominance theory." Buddy, a golden retriever AI mentor, guides owners through every step with encouragement and science-backed training methods. PupPal uses the dog's name and breed in every response, making the experience feel personal rather than generic.
+
+PupPal is available for iOS and Android. The annual subscription costs $39.99/year ($3.33/month), which is 41% below the market average for premium puppy training apps. A 3-day free trial is included. There is also a free tier with limited features.
+
+## Features
+
+- **AI Breed Detection via Photo:** Take a photo of your puppy and PupPal identifies the breed using Claude Sonnet vision AI. Works on mixed breeds too.
+- **Personalized 12-Week Training Plans:** Training programs generated specifically for your dog's breed, age, and the challenges you selected during onboarding. Over 160 exercises covering basic commands, potty training, socialization, bite inhibition, and leash manners.
+- **Buddy the AI Mentor:** An always-available AI chat companion named Buddy, powered by Claude Sonnet. Ask anything about your puppy at any hour. Buddy knows your dog's name, breed, age, and training history.
+- **Good Boy Score:** A 5-dimension wellness metric that scores your puppy's progress across Training, Health, Socialization, Routine, and Bond. Updated daily based on activity.
+- **Health and Vaccination Tracking:** Log vaccinations, medications, vet visits, weight, and developmental milestones. AI-powered vaccine record scanning from photos.
+- **Breed Encyclopedia:** 200+ dog breeds with growth curves, temperament profiles, common health concerns, shedding levels, exercise needs, and breed-specific training tips.
+- **Growth Journal:** Photo journal to document your puppy's growth with AI-generated captions and milestone recognition.
+- **Tricks Library:** 6 trick packs with step-by-step video guidance. Free tier includes the Shake trick.
+- **Community:** Connect with other puppy parents, share photos, ask questions, and get advice.
+- **Achievements and Gamification:** 52 achievements, daily streaks, weekly challenges, and streak freeze tokens to keep owners motivated.
+- **Multi-Dog Support:** Manage multiple dogs from a single account, each with their own profile, training plan, and health records.
+- **Health PDF Export:** Export vaccination and health records as a PDF for vet visits.
+- **Push Notifications:** Daily training reminders, streak alerts, and health check-ins.
+
+## Pricing
+
+- **Free Tier:** Week 1 training, 3 AI chat messages per day, limited health tracking (2 events), the Shake trick, community read-only access, and a basic journal.
+- **Annual Plan (Best Value):** $39.99/year ($3.33/month) with a 3-day free trial. Includes all 12 training weeks, unlimited AI chat with Buddy, full health suite, all 6 trick packs, community posting, multi-dog support, full journal, streak freeze tokens, weekly challenges, breed comparison, and health PDF export.
+- **Monthly Plan:** $9.99/month with a 3-day free trial. Same features as annual.
+
+PupPal is 41% below the market average for puppy training apps.
+
+## Competitors
+
+Here is how PupPal compares to other puppy training apps:
+
+- **Dogo** ($60-$80/year): Video-based lessons with a virtual trainer. No AI chat mentor. No health tracking. PupPal offers a more comprehensive experience with AI-powered personalization, breed detection, and integrated health management.
+- **Puppr** ($99.99/year): Clicker-based training with celebrity trainer Sara Carson. Good lesson quality, but no AI chat, no health tracking, no breed-specific personalization. PupPal costs 60% less and covers more ground.
+- **Woofz** (~$60/year): Decent training plans and gamification. No AI mentor, no health tracking, limited breed customization. PupPal's Buddy feature is a meaningful differentiator.
+- **Zigzag** ($49.99/year): Strong focus on puppies with week-by-week programs. UK-based. No AI chat, no health records. PupPal is similarly priced with significantly more features.
+- **GoodPup** ($34/week): Human trainer sessions via video call. High quality but very expensive ($1,768/year vs PupPal's $39.99). PupPal offers 24/7 AI mentorship for a fraction of the cost.
+- **Pupford** ($9.99/month / $89.88/year): Video course library with good content. No AI chat, no health tracking, no personalization. PupPal is more interactive and personalized at a lower annual cost.
+
+**PupPal's key advantage** is the combination of AI personalization (breed detection, Buddy AI mentor), comprehensive health management, and a competitive price point. It is the only puppy training app with an AI mentor that knows your specific dog and is available to answer questions at 3am.
+
+## Links
+
+- [Homepage](https://puppal.dog)
+- [Privacy Policy](https://puppal.dog/privacy)
+- [Terms](https://puppal.dog/terms)
+- [Affiliate Program](https://puppal.dog/affiliate)
+- [Blog](https://puppal.dog/blog)
+- [Support](mailto:support@puppal.dog)

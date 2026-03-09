@@ -6,6 +6,8 @@ import LandingPage from "./pages/LandingPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import AffiliatePage from "./pages/AffiliatePage";
+import BlogIndexPage from "./pages/blog/index";
+import BlogPostPage from "./pages/blog/[slug]";
 
 /**
  * PupPal Landing — Simple path-based routing.
@@ -57,12 +59,14 @@ function App() {
       "/privacy": "Privacy Policy — PupPal",
       "/terms": "Terms of Service — PupPal",
       "/affiliate": "Affiliate Program — Earn With PupPal",
+      "/blog": "Puppy Training Blog | PupPal",
     };
     const descriptions: Record<string, string> = {
       "/": "Train your puppy with an AI mentor that knows your breed. Personalized training plans, 160+ exercises, health tracking, and the Good Boy Score. $3.33/month.",
       "/privacy": "PupPal's privacy policy. Learn how we protect your data and your puppy's information.",
       "/terms": "PupPal's terms of service. Read about our terms and conditions for using the app.",
       "/affiliate": "Join PupPal's affiliate program. Earn 20-30% commission promoting the #1 AI puppy training app.",
+      "/blog": "Practical puppy training advice from the PupPal team. Bite inhibition, potty training, crate training, socialization, and more.",
     };
 
     document.title = titles[path] || titles["/"]!;
@@ -100,6 +104,10 @@ function App() {
     };
   }, []);
 
+  // Blog routing
+  const isBlogPost = path.startsWith("/blog/") && path.length > 6;
+  const blogSlug = isBlogPost ? path.replace("/blog/", "").replace(/\/$/, "") : "";
+
   return (
     <ErrorBoundary>
       {path === "/privacy" ? (
@@ -108,6 +116,10 @@ function App() {
         <TermsPage />
       ) : path === "/affiliate" ? (
         <AffiliatePage onJoinWaitlist={handleJoinWaitlist} />
+      ) : path === "/blog" || path === "/blog/" ? (
+        <BlogIndexPage />
+      ) : isBlogPost ? (
+        <BlogPostPage slug={blogSlug} />
       ) : (
         <LandingPage onJoinWaitlist={handleJoinWaitlist} utmParams={utmParams} />
       )}
